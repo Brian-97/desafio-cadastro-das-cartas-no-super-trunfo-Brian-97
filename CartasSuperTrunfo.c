@@ -3,35 +3,66 @@
 int main() {
 
 
-    int pontos_turisticos;
-    float populacao, area, pib, densidade, pib_capita;
-    char cidade[50], cod_cidade[15];
+    int C1_pontos_turisticos;
+    int C2_pontos_turisticos;
+    float C1_populacao, C1_area, C1_pib, C1_densidade, C1_pib_capita;
+    float C2_populacao, C2_area, C2_pib, C2_densidade, C2_pib_capita;
+    char C1_cidade[50], C1_cod_cidade[15];
+    char C2_cidade[50], C2_cod_cidade[15];
 
-    printf("Informe o nome da cidade \n");
-    scanf("%49s", cidade);
+    printf("\t **** Configuração da carta 01 **** \n");
+    printf("Informe o nome da cidade 01\n");
+    scanf("%49s", C1_cidade);
 
-    printf("Informe o codigo cidade \n");
-    scanf("%14s", cod_cidade);
+    printf("Informe o codigo cidade 01\n");
+    scanf("%14s", C1_cod_cidade);
 
-    printf("Informe a quantidade de pontos turisticos da cidade \n");
-    scanf("%d", &pontos_turisticos);
+    printf("Informe a quantidade de pontos turisticos da cidade 01\n");
+    scanf("%d", &C1_pontos_turisticos);
 
-    printf("Informe área da cidade \n");
-    scanf("%f", &area);
+    printf("Informe área da cidade 01\n");
+    scanf("%f", &C1_area);
 
-    printf("Informe o PIB cidade \n");
-    scanf("%f", &pib);
+    printf("Informe o PIB cidade 01\n");
+    scanf("%f", &C1_pib);
 
-    printf("Informe a população da cidade \n");
-    scanf("%f", &populacao);
+    printf("Informe a população da cidade 01\n");
+    scanf("%f", &C1_populacao);
 
-    densidade = populacao / area;
-    pib_capita = pib / populacao;
+    printf("\t **** Configuração da carta 02 **** \n");
+    printf("Informe o nome da cidade 02\n");
+    scanf("%49s", C2_cidade);
 
-    printf("\t **** Carta configurada **** \n");
-    printf("\t\tCidade: %s \n\t\tCodigo: %s \n\t\tPontos Turisticos: %d \n\t\tÁrea da cidade: %f \n" , cidade, cod_cidade, pontos_turisticos, area);
-    printf("\t\tPIB: %f \n\t\tPopulação: %f \n" , pib, populacao);
-    printf("\t\tDensidade: %f \n\t\tPIB per capita: %f \n\n" , densidade, pib_capita);
+    printf("Informe o codigo cidade 02\n");
+    scanf("%14s", C2_cod_cidade);
+
+    printf("Informe a quantidade de pontos turisticos da cidade 02\n");
+    scanf("%d", &C2_pontos_turisticos);
+
+    printf("Informe área da cidade 02\n");
+    scanf("%f", &C2_area);
+
+    printf("Informe o PIB cidade 02\n");
+    scanf("%f", &C2_pib);
+
+    printf("Informe a população da cidade 02\n");
+    scanf("%f", &C2_populacao);
+
+    C1_densidade = C1_populacao / C1_area;
+    C1_pib_capita = C1_pib / C1_populacao;
+
+    C2_densidade = C2_populacao / C2_area;
+    C2_pib_capita = C2_pib / C2_populacao;
+
+    printf("\t **** Carta configurada 01 **** \n");
+    printf("\t\tCidade: %s \n\t\tCodigo: %s \n\t\tPontos Turisticos: %d \n\t\tÁrea da cidade: %f \n" , C1_cidade, C1_cod_cidade, C1_pontos_turisticos, C1_area);
+    printf("\t\tPIB: %f \n\t\tPopulação: %f \n" , C1_pib, C1_populacao);
+    printf("\t\tDensidade: %f \n\t\tPIB per capita: %f \n\n" , C1_densidade, C1_pib_capita);
+
+    printf("\t **** Carta configurada 02 **** \n");
+    printf("\t\tCidade: %s \n\t\tCodigo: %s \n\t\tPontos Turisticos: %d \n\t\tÁrea da cidade: %f \n" , C2_cidade, C2_cod_cidade, C2_pontos_turisticos, C2_area);
+    printf("\t\tPIB: %f \n\t\tPopulação: %f \n" , C2_pib, C2_populacao);
+    printf("\t\tDensidade: %f \n\t\tPIB per capita: %f \n\n" , C2_densidade, C2_pib_capita);
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
